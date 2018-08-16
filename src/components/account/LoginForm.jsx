@@ -47,11 +47,6 @@ class LoginForm extends Component {
               <label>密码：</label>
               <input value={this.state.password} type='password' onChange={e => this.setState({ password: e.target.value })} className='form-control' placeholder='Password' required />
             </div>
-            <div className='form-group'>
-              <label>验证码：</label>
-              <input onChange={e => this.setState({ captcha: e.target.value })} className='form-control' placeholder='验证码' required />
-              <img src={`${serve}/captcha?t=${this.state.captchaId || ''}`} onClick={e => this.setState({ captchaId: Date.now() })} alt='captcha' />
-            </div>
           </div>
           <div className='footer'>
             <button type='submit' className='btn btn-primary w140 mr20'>提交</button>
